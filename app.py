@@ -1,7 +1,7 @@
 """
-University of Pretoria - Institutional Analytics Dashboard v3.
+Institutional Analytics Dashboard v3.
 
-Main entry. Applies global styling, presents landing page with description
+Main entry. Applies global styling, presents a landing page with a description
 of all six analytical domains.
 """
 import streamlit as st
@@ -17,8 +17,8 @@ st.set_page_config(
 
 apply_theme()
 page_header(
-    "UP Institutional Analytics",
-    "Strategic Dashboard for the Vice-Chancellor and Executive",
+    "Executive - Institutional Analytics",
+    "Strategic Dashboard for Executive Manangment and Faculty Deans",
 )
 
 # Landing description
@@ -28,13 +28,13 @@ st.markdown(
                 border-left:4px solid {UP_BLUE};margin-bottom:20px;">
         <h3 style="margin-top:0;color:{UP_BLUE};">About this dashboard</h3>
         <p style="margin-bottom:8px;line-height:1.6;">
-            This dashboard supports strategic decision-making at the University of Pretoria
-            by linking operational data to the funding instruments in the 2025 Ministerial
-            Statement and to the targets in UP 2025.
+            This dashboard supports strategic decision-making at the University
+            by linking enrolment, student success, staff and financial data to the funding instruments
+            and to the targets.
         </p>
         <p style="margin-bottom:0;line-height:1.6;">
             <strong>Filters apply across all pages</strong> via the sidebar. Filter by
-            faculty, programme cluster, level, funding group, and mode to focus the
+            faculty, programme cluster, level, funding group, and mode to focus on the
             analysis on the cut that matters to your decision.
         </p>
     </div>
@@ -55,7 +55,7 @@ with col_left:
             <p style="margin:0;font-size:14px;">
                 Enrolment (Actual vs Plan with UG/PG breakdown, statistical analysis,
                 executive narrative), Student Success (against DHET 80% sector benchmark),
-                Efficiency, and Financial indicators. Full disaggregation by faculty,
+                Efficiency and Financial Indicators. Full disaggregation by faculty,
                 programme cluster, level, funding group, and mode.
             </p>
         </div>
