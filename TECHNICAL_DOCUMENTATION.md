@@ -1,6 +1,6 @@
 # Technical Documentation
 
-University of Pretoria Institutional Analytics Dashboard, Version 3.0.
+Institutional Analytics Dashboard, Version 3.0.
 
 ## Architecture
 
