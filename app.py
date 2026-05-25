@@ -18,7 +18,7 @@ st.set_page_config(
 apply_theme()
 page_header(
     "Executive - Institutional Analytics",
-    "Strategic Dashboard for Executive Manangment and Faculty Deans",
+    "Strategic Dashboard for Executive Manangement and Faculty Deans",
 )
 
 # Landing description
