@@ -85,10 +85,10 @@ with tab1:
         st.markdown(
             f"""<div style="background:white;padding:14px;border-left:4px solid {UP_RED};border-radius:4px;margin:10px 0;">
             <strong style="color:{UP_RED};">⚠ Strategic alert.</strong>
-            Enrolment variance of {variance:+.1%} breaches the UP 2025 ±2% internal threshold
+            Enrolment variance of {variance:+.1%} breaches the 2025 ±2% internal threshold
             {'and the DHET ±3% ceiling. ' if dhet_status == 'Red' else 'although it remains within the DHET ±3% ceiling. '}
             The Subsidy and Strategic Risk page quantifies the rand-value exposure under the
-            2025 Ministerial Statement penalty regime. Executive action is required to
+            2025 DHET penalty regime. Executive action is required to
             rebalance the next admissions cycle.
             </div>""",
             unsafe_allow_html=True,
@@ -106,7 +106,7 @@ with tab1:
         st.markdown(
             f"""<div style="background:white;padding:14px;border-left:4px solid #2E7D32;border-radius:4px;margin:10px 0;">
             <strong style="color:#2E7D32;">Compliant.</strong>
-            Variance of {variance:+.1%} is within both the UP 2025 ±2% threshold and the DHET ±3% ceiling.
+            Variance of {variance:+.1%} is within both the 2025 ±2% threshold and the DHET ±3% ceiling.
             </div>""",
             unsafe_allow_html=True,
         )
@@ -184,7 +184,7 @@ with tab1:
     fig.add_trace(go.Scatter(x=inst["Year"], y=plan * (1 + UP_2025_VARIANCE_THRESHOLD),
         line=dict(color=UP_GOLD, dash="dash"), name="UP 2025 +2%"))
     fig.add_trace(go.Scatter(x=inst["Year"], y=plan * (1 - UP_2025_VARIANCE_THRESHOLD),
-        line=dict(color=UP_GOLD, dash="dash"), name="UP 2025 -2%"))
+        line=dict(color=UP_GOLD, dash="dash"), name="2025 -2%"))
     fig.add_trace(go.Scatter(x=inst["Year"], y=plan, name="Approved plan",
         line=dict(color=UP_BLUE, width=3, dash="dash"), mode="lines+markers"))
     fig.add_trace(go.Scatter(x=inst["Year"], y=inst["ActualHeadcount"], name="Actual",
@@ -358,7 +358,7 @@ with tab1:
             <strong style="color:{UP_GOLD};">📊 Planning accuracy concern.</strong>
             The mean absolute percentage error between approved plan and actual is {acc['mape']:.1%},
             with the worst year reaching {acc['max_abs_dev_pct']:.1%}.
-            Enrolment planning accuracy needs strengthening to support reliable Ministerial submissions.
+            Enrolment planning accuracy needs to be strengthened to support reliable DHET submissions.
             </div>""",
             unsafe_allow_html=True,
         )
