@@ -1,6 +1,6 @@
 """
 Subsidy and Strategic Risk page.
-TIU, TOU, graduate conversion, output per FTE, rand-value exposure.
+TIU, TOU, graduate conversion, output per FTE, and rand-value exposure.
 """
 from pathlib import Path
 import sys
