@@ -213,10 +213,13 @@ with tab1:
     fig.add_hline(y=penalty_trigger * 100, line_dash="dot", line_color=UP_RED, row=1, col=2)
     fig.add_hline(y=-penalty_trigger * 100, line_dash="dot", line_color=UP_RED, row=1, col=2)
 
-    fig.add_trace(go.Scatter(x=sc["Year"], y=sc["Capacity utilisation"] * 100,
-        name="Cap utilisation %", line=dict(color=UP_BLUE, width=3), mode="lines+markers"), row=2, col=1)
-    fig.add_trace(go.Scatter(x=sc["Year"], y=sc["Student-Staff Ratio"],
-        name="SSR", line=dict(color=UP_RED, width=3, dash="dash"), mode="lines+markers", yaxis="y4"), row=2, col=1)
+    fig.add_trace(go.Scatter(x=sc["Year"], y=sc["Capacity utilisation"] * 100,name="Capacity utilisation %",
+        line=dict(color=UP_BLUE, width=3), mode="lines+markers" ), row=2, col=1,secondary_y=False)
+   fig.add_trace(go.Scatter(x=sc["Year"],y=sc["Student-Staff Ratio"], name="Student-staff ratio",
+        line=dict(color=UP_RED, width=3, dash="dash"), mode="lines+markers" ), row=2, col=1, secondary_y=True
+   fig.update_yaxes( title_text="Capacity utilisation (%)",row=2, col=1, secondary_y=False)
+   fig.update_yaxes( title_text="Student-staff ratio", row=2, col=1,  secondary_y=True
+)
 
     cumulative_penalty = sc["Penalty (Rm)"].cumsum()
     fig.add_trace(go.Bar(x=sc["Year"], y=cumulative_penalty,
